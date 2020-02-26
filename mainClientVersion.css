@@ -1,0 +1,219 @@
+@charset "EUC-KR";
+/* Simple Reset CSS */
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #58666e;
+    background-color: #f0f3f4;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjus: 100%;  /* iphone font size 변경 방지 */
+  }
+  li { list-style: none; }
+  a { text-decoration: none; }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 10px 5px;
+  }
+  h1 { font-size: 1.8em; }
+
+  #wrap {
+    width: 100%;
+    /* margin-top = header height */
+    margin-top: 60px;
+  }
+
+  /* Navigation bar */
+  header {
+    /* for sticky header */
+    position: fixed;/*상단 고정*/
+    top: 0;
+
+    width: 100%;
+    height: 60px;
+    z-index: 2000;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+  }
+  .logo {
+    display: inline-block;
+    height: 36px;
+    margin: 0px 0 5px 25px;
+  }
+  .logo > img { height: 55px; }
+  nav {
+    float: right;
+  }
+  .nav-items {
+    margin-right: 15px;
+  }
+  .nav-items > li {
+    display: inline-block;  /* 가로정렬 */
+  }
+  .nav-items > li > a {
+    /* for Vertical Centering */
+    line-height: 60px;
+    padding: 0 30px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .nav-items > li > a:hover {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  button.side_menu{
+    margin: 15px 30px 0 0;
+    background-color: inherit;
+    padding: 0;
+    border: none;
+    width: 30px;
+    height: 30px;
+    float: right;
+  }
+  .menu_img{
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  }
+
+  /* contents */
+  /* clearfix */
+  #content-wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  aside {
+    /* for fixed side bar */
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    width: 200px;  /* 너비 고정 */
+    padding-top: 0;
+    background-color: rgb(223, 223, 223);
+    display: none;
+  }
+  /* aside navigation */
+  aside > ul {
+    width: 200px;
+  }
+  aside > ul > li > a {
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 10px 0 10px 20px;
+  }
+  aside > ul > li > a.active {
+    background-color: rgb(92, 92, 92);
+    color: white;
+  }
+  aside > ul > li > a:hover:not(.active) {
+    background-color: rgb(163, 163, 163);
+  }
+  aside > div {
+    height: 65px;
+    background-color: rgb(169, 171, 255);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  aside > div > img {
+    height: 45px;
+    width: 45px;
+    margin: 0;
+    float: left;
+  }
+  aside > div > a {
+    margin: 3px 0 0 5px;
+    padding: 0;
+    float: left;
+    font-size: 17px;
+    color: rgb(54, 54, 54);
+    font-weight: bold ;
+  }
+  aside > div > p {
+    margin: 0;
+    padding: 0;
+    float: left;
+    font-size: 17px;
+  }
+  aside > div > div {
+    font-size: 11px;
+    border: 1px solid black;
+    display: block;
+    margin: 5px;
+    float: left;
+  }
+  /* Section */
+  section {
+    float: left;
+    /* aside width */
+    margin-right: 200px;
+  }
+  article {
+    margin: 10px;
+    padding: 25px;
+    background-color: white;
+  }
+  /* footer */
+  footer {
+    /* footer를 aside위에 올리기 위해 사용(부유객체) */
+        position: absolute;
+        bottom: 0;
+        height: 60px;
+        width: 100%;
+        padding: 0 25px;
+        line-height: 60px;
+        color: #8a8c8f;
+        border-top: 1px solid #dee5e7;
+        background-color: #e7e7e7;
+  }
+  /*여기까지는 페이지 기본 css(nav, aside, footer)*/
+
+  /*센터 달력*/
+  table{
+    margin: 10px 0 10px 170px;
+    border:1px solid #BDBDBD;
+    text-align:center;
+    width:900px;
+    height: 580px;
+    background-color: white;
+    font-size: 30px;
+    font-weight: lighter;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+  }
+  .month{
+    font-size: 20px;
+    color: #B3B6B3;
+  }
+  .thismonth{
+    font-size: 40px;
+  }
+  td, th, tr{
+    padding: 15px;
+    font-weight: bold;
+  }
+
+  td:hover{
+    background-color: rgb(211, 245, 205);
+  }
+
+
+  /*하루일정*/
+  .daily{
+    color: gray;
+    background-color: white;
+    margin: 10px 0 10px 10px;
+    width: 230px;
+    height: 580px;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  .dailyin{
+    margin: 10px;
+    height: 525px;
+  }
